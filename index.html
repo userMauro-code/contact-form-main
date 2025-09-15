@@ -15,31 +15,45 @@
   </style>
 </head>
 <body>
-
-  Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
+  <main>
+    <form class="content__card">
+      <fieldset>
+        <legend>Contact Us</legend>
+        <label for="first__name">First Name</label>
+        <input type="text" id="first__name" name="first__name" required>
+        <p>This field is required</p>
+        <label for="last__name">Last Name</label>
+        <input type="text" id="last__name" name="last__name" required>
+        <p>This field is required</p>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email">
+        <p>Please enter a valid email address</p>
+        <p>This field is required</p>
+      </fieldset>
+      <fieldset>
+        <legend>Query Type</legend>
+          <div class="select">
+            <input type="radio" name="query" id="enquiry">
+            <label for="enquiry">General Enquiry</label>
+          </div>
+          <div class="select">
+            <input type="radio" name="query" id="request">
+            <label for="request">Support Request</label>
+          </div>
+          <p>Please select a query type</p> 
+          </fieldset>
+          <fieldset>
+             <label for="textarea">Message</label>
+          <textarea name="" id="textarea"></textarea>
+        <p>This field is required</p>
+          </fieldset>
+       
+        <input type="checkbox" id="checkbox__btn">
+        <label for="checkbox__btn">I consent to being contacted by the team</label>
+        <p>To submit this form, please consent to being contacted</p>
+        <button type="submit">Submit</button>
+    </form>
+  </main>
 
   Message Sent!
   Thanks for completing the form. We'll be in touch soon!
