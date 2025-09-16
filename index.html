@@ -18,19 +18,30 @@
   <main>
     <form class="content__card">
       <fieldset>
+        <!-- contactos -->
         <legend>Contact Us</legend>
+        
+        <!-- first name -->
         <label for="first__name">First Name</label>
-        <input type="text" id="first__name" name="first__name" required>
-        <p>This field is required</p>
+        <input type="text" id="first__name" name="first__name" required aria-describedby="error-first-name">
+        <p id="error-first-name" class="error" hidden>This field is required</p>
+        
+        <!-- last name  -->
         <label for="last__name">Last Name</label>
-        <input type="text" id="last__name" name="last__name" required>
-        <p>This field is required</p>
+        <input type="text" id="last__name" name="last__name" required aria-describedby="error-last-name">
+        <p id="error-last-name" hidden>This field is required</p>
+
+        <!-- email  -->
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email">
-        <p>Please enter a valid email address</p>
-        <p>This field is required</p>
+        <input type="email" id="email" name="email" required aria-describedby="error-mail">
+        <p id="error-mail"></p>
+        <!-- <p id="error-mail" hidden>Please enter a valid email address</p>
+        <p hidden>This field is required</p> -->
       </fieldset>
-      <fieldset>
+      <!-- contactos finalized -->
+
+      <!-- query selection -->
+      <fieldset class="query__content">
         <legend>Query Type</legend>
           <div class="select">
             <input type="radio" name="query" id="enquiry">
@@ -40,24 +51,33 @@
             <input type="radio" name="query" id="request">
             <label for="request">Support Request</label>
           </div>
-          <p>Please select a query type</p> 
-          </fieldset>
-          <fieldset>
-             <label for="textarea">Message</label>
-          <textarea name="" id="textarea"></textarea>
-        <p>This field is required</p>
-          </fieldset>
-       
-        <input type="checkbox" id="checkbox__btn">
-        <label for="checkbox__btn">I consent to being contacted by the team</label>
-        <p>To submit this form, please consent to being contacted</p>
-        <button type="submit">Submit</button>
-    </form>
-  </main>
+          <p hidden>Please select a query type</p> 
+      </fieldset>
+      <!-- query selection finalized -->
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
+      <!-- textarea Message -->
+      <fieldset>
+        <legend>Message</legend>
+        <textarea name="message" id="textarea" aria-describedby="error-textarea" required></textarea>
+        <p id="error-textarea" hidden>This field is required</p>
+      </fieldset>
+      <!-- textarea Message finalized -->
+
+      <!-- checkbox  -->
+      <input type="checkbox" id="checkbox__btn" aria-describedby="error-checkbox" required>
+      <label for="checkbox__btn">I consent to being contacted by the team</label>
+      <p id="error-checkbox" hidden >To submit this form, please consent to being contacted</p>
+      <!-- checkbox finalized -->
+
+      <!-- button  -->
+      <button type="submit">Submit</button>
+      <!-- button finalized -->
+    </form>
+    <div id="success-mesagge" class="success" role="status" aria-live="polite" hidden>
+      <p>Message Sent!</p>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
