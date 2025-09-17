@@ -1,0 +1,120 @@
+:root {
+    --primary-green200: hsl(149,38%,91%);
+    --primary-green600: hsl(169,82%,27%);
+    --primary-red900: hsl(187,24%,22%);
+    --neutral-white: hsl(0, 0%,100%);
+    --neutral-grey500: hsl(186,15%,59%);
+    --neutral-grey: hsl(187,24%,22%);   
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    background-color: var(--primary-green200);
+    font-family: "Karla", sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    margin-top: 1em;
+}
+
+.content__card {
+    background-color: var(--neutral-white);
+    margin: 1em;
+    border-radius: .5em;
+    padding: 1em;
+    max-width: 375px;
+}
+
+.form-fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin:  1em 0;
+}
+
+.title__form {
+    font-weight: 700;
+    color: var(--primary-red900);
+    font-size: 1.5em;
+}
+
+input {
+    height: 3em;
+    border-radius: .5em;
+    border: 1px solid var(--neutral-grey500);
+}
+
+input:focus {
+    padding-left: 1em;
+    outline: none;
+}
+
+.div__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    line-height: 0;
+    margin: 2em 0 1em 0;
+}
+
+.select {
+    border: 1px solid var(--neutral-grey500);
+    border-radius: .5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    padding-left: 1em;
+    margin: .5em 0;
+}
+
+.textarea {
+    border-radius: .5em;
+    border: 1px solid var(--neutral-grey500);
+    height: 10em;
+}
+
+.textarea:focus{
+    outline: none;
+    padding-left: 1em;
+}
+
+.content__checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center; gap: 1em;
+    color: var(--primary-red900);
+}
+
+.button__submit {
+    width: 100%;
+    color: var(--neutral-white);
+    background-color: var(--primary-green600);
+    border: none;
+    border-radius: .5em;
+    height: 3em;
+}
+
+input:required:invalid + label::after {
+  content: " *";
+  color: red;
+}
+
+input:required:valid + label::after {
+  content: " *";
+  color: green;
+}
