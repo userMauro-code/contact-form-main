@@ -67,8 +67,14 @@ input:focus {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    line-height: 0;
+    line-height: 1;
     margin: 2em 0 1em 0;
+}
+
+.contact__separation {
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
 }
 
 .select {
@@ -86,6 +92,7 @@ input:focus {
     border-radius: .5em;
     border: 1px solid var(--neutral-grey500);
     height: 10em;
+    margin-top: .5em;
 }
 
 .textarea:focus{
@@ -109,12 +116,25 @@ input:focus {
     height: 3em;
 }
 
-input:required:invalid + label::after {
+/* input:required:invalid + label::after {
   content: " *";
   color: red;
+} */
+
+.label, .label__query{
+    color: var(--primary-red900);
 }
 
-input:required:valid + label::after {
+.label::after {
   content: " *";
-  color: green;
+  color: var(--primary-green600);
+}
+
+.legend__style::after {
+    content: " *";
+    color: var(--primary-green600);
+}
+
+.legend__style {
+    color: var(--primary-red900);
 }

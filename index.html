@@ -26,37 +26,43 @@
         <legend class="title__form">Contact Us</legend>
         
         <!-- first name -->
-         <div class="div__contact">
-                  <label for="first__name">First Name</label>
-        <input type="text" id="first__name" name="first__name" required aria-describedby="error-first-name">
-        <p id="error-first-name" class="error" hidden>This field is required</p>
-        
+        <div class="div__contact">
+          <div class="contact__separation">
+            <label for="first__name" class="label">First Name</label>
+            <input type="text" id="first__name" name="first__name" required aria-describedby="error-first-name">
+            <p id="error-first-name" class="error" hidden>This field is required</p>
+          </div>
+                  
         <!-- last name  -->
-        <label for="last__name">Last Name</label>
-        <input type="text" id="last__name" name="last__name" required aria-describedby="error-last-name">
-        <p id="error-last-name" hidden>This field is required</p>
-
+          <div class="contact__separation">
+            <label for="last__name" class="label">Last Name</label>
+            <input type="text" id="last__name" name="last__name" required aria-describedby="error-last-name">
+            <p id="error-last-name" hidden>This field is required</p>
+          </div>
+          
         <!-- email  -->
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required aria-describedby="error-mail">
-        <p id="error-mail" hidden></p>
-        <!-- <p id="error-mail" hidden>Please enter a valid email address</p>
-        <p hidden>This field is required</p> -->
-         </div>
-
+          <div class="contact__separation">
+            <label for="email" class="label">Email Address</label>
+            <input type="email" id="email" name="email" required aria-describedby="error-mail">
+            <p id="error-mail" hidden></p>
+            <!-- <p id="error-mail" hidden>Please enter a valid email address</p>
+            <p hidden>This field is required</p> -->
+          </div>
+         
+        </div>
       </fieldset>
       <!-- contactos finalized -->
 
       <!-- query selection -->
       <fieldset class="query__content form-fieldset">
-        <legend>Query Type</legend>
+        <legend class="legend__style">Query Type</legend>
           <div class="select">
             <input type="radio" name="query" id="enquiry">
-            <label for="enquiry">General Enquiry</label>
+            <label for="enquiry" class="label__query">General Enquiry</label>
           </div>
           <div class="select">
             <input type="radio" name="query" id="request">
-            <label for="request">Support Request</label>
+            <label for="request" class="label__query">Support Request</label>
           </div>
           <p hidden>Please select a query type</p> 
       </fieldset>
@@ -64,16 +70,19 @@
 
       <!-- textarea Message -->
       <fieldset class="form-fieldset">
-        <legend>Message</legend>
-        <textarea class="textarea" name="message" id="textarea" aria-describedby="error-textarea" required></textarea>
-        <p id="error-textarea" hidden>This field is required</p>
+        <legend class="legend__style">Message</legend>
+          <div class="contact__separation">
+          <textarea class="textarea" name="message" id="textarea" aria-describedby="error-textarea" required></textarea>
+          <p id="error-textarea" hidden>This field is required</p>
+        </div>
+        
       </fieldset>
       <!-- textarea Message finalized -->
 
       <!-- checkbox  -->
       <div class="content__checkbox">
         <input type="checkbox" id="checkbox__btn" aria-describedby="error-checkbox" required>
-        <label for="checkbox__btn">I consent to being contacted by the team</label>
+        <label for="checkbox__btn" class="label">I consent to being contacted by the team</label>
         <p id="error-checkbox" hidden >To submit this form, please consent to being contacted</p>
       </div>
       
