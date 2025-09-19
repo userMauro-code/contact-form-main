@@ -63,6 +63,10 @@ input:focus {
     outline: none;
 }
 
+.error__email {
+    color: red;
+}
+
 .div__contact {
     display: flex;
     flex-direction: column;

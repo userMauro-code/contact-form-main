@@ -20,7 +20,7 @@
 </head>
 <body>
   <main class="main">
-    <form class="content__card">
+    <form class="content__card" novalidate>
       <fieldset class="contact__us form-fieldset">
         <!-- contactos -->
         <legend class="title__form">Contact Us</legend>
@@ -43,8 +43,8 @@
         <!-- email  -->
           <div class="contact__separation">
             <label for="email" class="label">Email Address</label>
-            <input type="email" id="email" name="email" required aria-describedby="error-mail">
-            <p id="error-mail" hidden></p>
+            <input type="email" id="email" name="email" required aria-describedby="error-email">
+            <p class="error__email" id="error-email" hidden></p>
             <!-- <p id="error-mail" hidden>Please enter a valid email address</p>
             <p hidden>This field is required</p> -->
           </div>
