@@ -16,6 +16,7 @@ const checkboxError = document.getElementById("error-checkbox");
 formulario.addEventListener('submit', (e)=> {
     e.preventDefault();
     // email--------------
+
     if(emailInput.value === ""){
         emailError.textContent = "this fiel is required";
         emailError.hidden = false;
@@ -29,6 +30,7 @@ formulario.addEventListener('submit', (e)=> {
         emailInput.setAttribute("aria-invalid", "false");
     }
     // name--------------
+
     if(nameUser.value === ""){
         nameError.hidden = false;
         nameUser.setAttribute("aria-invalid", "true")
@@ -37,6 +39,7 @@ formulario.addEventListener('submit', (e)=> {
         nameUser.setAttribute("aria-invalid", "false");
     }
     // last name--------
+
     if(lastNameUser.value === ""){
         lastNameUserError.hidden = false;
         lastNameUser.setAttribute("aria-invalid", "true");
@@ -45,16 +48,41 @@ formulario.addEventListener('submit', (e)=> {
         lastNameUser.setAttribute("aria-invalid", "false");
     };
     // query Type-------
+    
+    let queryTypeSelect = false;
+
     queryType.forEach( Element => {
-        if(Element.checked === false){
+
+        if(Element.checked){
+            queryTypeSelect = true
+        }    
+    });
+    if(queryTypeSelect === false){
             queryError.hidden = false;
-            Element.setAttribute("aria-invalid", "true");
+            queryType.forEach( el => el.setAttribute("aria-invalid", "true"));
         }else{
             queryError.hidden = true;
-            Element.setAttribute("aria-invalid", "false")
-        }
-    });
+            queryType.forEach(el => el.setAttribute("aria-invalid", "false"));
+        };
+
+    
+    // let queryTypeSelect = false;
+
+    // queryType.forEach(Element => {
+    //     if(Element.checked){
+    //         queryTypeSelect = true;
+    //     }    
+    // });
+
+    // if(queryTypeSelect === false){
+    //     queryError.hidden = false;
+    //     queryType.forEach(el => el.setAttribute("aria-invalid", "true"));
+    // }else{
+    //     queryError.hidden = true;
+    //     queryType.forEach(el => el.setAttribute("aria-invalid", "false"));
+    // };
     // textarea----------
+
     if(textareaMessage.value === ""){
         textareaMessageError.hidden = false;
         textareaMessage.setAttribute("aria-invalid","true");
@@ -62,6 +90,8 @@ formulario.addEventListener('submit', (e)=> {
         textareaMessageError.hidden = true;
         textareaMessage.setAttribute("aria-invalid", "false")
     };
+    // checkbox------
+
     if(checkbox.checked === false){
         checkboxError.hidden = false;
         checkbox.setAttribute("aria-invalid", "true");
