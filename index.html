@@ -27,18 +27,21 @@
         
         <!-- first name -->
         <div class="div__contact">
-          <div class="contact__separation">
-            <label for="first__name" class="label">First Name</label>
-            <input type="text" id="first__name" name="first__name" required aria-describedby="error-first-name">
-            <p  id="error-first-name" class="error__input" hidden>This field is required</p>
-          </div>
+          <div class="desing__desktop">
+            <div class="contact__separation">
+              <label for="first__name" class="label">First Name</label>
+              <input type="text" id="first__name" name="first__name" required aria-describedby="error-first-name">
+              <p  id="error-first-name" class="error__input" hidden>This field is required</p>
+            </div>
                   
         <!-- last name  -->
           <div class="contact__separation">
             <label for="last__name" class="label">Last Name</label>
             <input type="text" id="last__name" name="last__name" required aria-describedby="error-last-name">
             <p class="error__input" id="error-last-name" hidden>This field is required</p>
+            </div>
           </div>
+  
           
         <!-- email  -->
           <div class="contact__separation">
@@ -56,7 +59,8 @@
       <!-- query selection -->
       <fieldset class="query__content form-fieldset">
         <legend class="legend__style">Query Type</legend>
-          <div class="select">
+        <div class="desing__desktop"> 
+          <div class="select" name="query">
             <input type="radio" name="query" id="enquiry">
             <label for="enquiry" class="label__query">General Enquiry</label>
           </div>
@@ -64,6 +68,8 @@
             <input type="radio" name="query" id="request">
             <label for="request" class="label__query">Support Request</label>
           </div>
+        </div>
+      
           <p class="error__input" id="error-query" hidden>Please select a query type</p> 
       </fieldset>
       <!-- query selection finalized -->

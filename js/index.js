@@ -65,22 +65,6 @@ formulario.addEventListener('submit', (e)=> {
             queryType.forEach(el => el.setAttribute("aria-invalid", "false"));
         };
 
-    
-    // let queryTypeSelect = false;
-
-    // queryType.forEach(Element => {
-    //     if(Element.checked){
-    //         queryTypeSelect = true;
-    //     }    
-    // });
-
-    // if(queryTypeSelect === false){
-    //     queryError.hidden = false;
-    //     queryType.forEach(el => el.setAttribute("aria-invalid", "true"));
-    // }else{
-    //     queryError.hidden = true;
-    //     queryType.forEach(el => el.setAttribute("aria-invalid", "false"));
-    // };
     // textarea----------
 
     if(textareaMessage.value === ""){
