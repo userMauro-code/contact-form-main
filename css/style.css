@@ -28,15 +28,19 @@ body {
 }
 
 .main {
-    margin-top: 1em;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    max-width: 375px;
+    width: 100%;
 }
 
 .content__card {
     background-color: var(--neutral-white);
-    margin: 1em;
     border-radius: .5em;
     padding: 1em;
     max-width: 375px;
+    width: 100%;
 }
 
 .form-fieldset {
@@ -157,9 +161,35 @@ input {
     color: var(--primary-red900);
 }
 
+.success {
+    background-color: var(--primary-red900);
+    color: var(--neutral-white);
+    padding: 1em;
+    border-radius: .5em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.success__row {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    
+}
+
+.success__sent {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
 @media (min-width: 900px) {
 
-    main {
+    .main {
+        max-width: 1200px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -222,4 +252,8 @@ input:focus {
     margin-bottom: 1em
   }
 
+  .success {
+    max-width: 450px;
+    width: 100%;
+  }
 }
