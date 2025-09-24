@@ -198,6 +198,7 @@ input {
   .content__card {
     width: 100%;
     max-width: 800px;
+    padding: 2em;
   }
 
   .desing__desktop {
