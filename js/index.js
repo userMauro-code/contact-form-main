@@ -106,7 +106,8 @@ formulario.addEventListener('submit', (e)=> {
 
     // succes message-----------
    if(isValid) {
-    document.getElementById("success-mesagge").hidden = false;
+    const mesagge = document.getElementById("success-mesagge").hidden = false;
     formulario.reset();
+    mesagge.style.display = "flex";
    }
 })
